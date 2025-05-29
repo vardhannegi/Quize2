@@ -18,7 +18,7 @@ uv sync
 ---
 
 ### 🚀 How to Run the Project
-1. Apply database migrations:
+1. Run database container:
    ```bash
    docker run --name=empdb -p 5432:5432 -e POSTGRES_DB=empdb -e POSTGRES_USER=root -e POSTGRES_PASSWORD=pass -d postgres
    ```
@@ -68,8 +68,8 @@ uv sync
 | `/api/performance-records/{id}/` | DELETE | `http://127.0.0.1:8000/api/performance-records/1/` | Delete a performance record.                                                      |
 | `/api/attendance/`               | POST   | `http://127.0.0.1:8000/api/attendance/`            | Create an attendance record. See [Attendance POST Body](#attendance-post-body).   |
 | `/api/attendance/{id}/`          | PUT    | `http://127.0.0.1:8000/api/attendance/1/`          | Update an attendance record. See [Attendance PUT Body](#attendance-put-body).     |
-| `/api/swagger/`          | GET | `http://127.0.0.1:8000/api/swagger/`          | Swagger API documentation.
-| `/api-token-auth/`          | POST | `http://127.0.0.1:8000/api-token-auth/`          | Obtain authentication token.|
+| `/api/swagger/`                  | GET    | `http://127.0.0.1:8000/api/swagger/`               | Swagger API documentation.                                                        |
+| `/api-token-auth/`               | POST   | `http://127.0.0.1:8000/api-token-auth/`            | Obtain authentication token.                                                      |
 ---
 
 ### 🔧 Example API Payloads
@@ -125,7 +125,7 @@ uv sync
 }
 ```
 
-#### Create an Attendance Record (`POST /api-token-auth/`)
+#### Get an Token (`POST /api-token-auth/`)
 ```json
 {
     "username": "<your_username>",
